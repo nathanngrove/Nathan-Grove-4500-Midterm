@@ -234,7 +234,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Search',
         ],
         ['header' => 'Filters'],
             [
