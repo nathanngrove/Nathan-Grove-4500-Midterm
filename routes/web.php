@@ -17,11 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/db-test', function () {
+    try {         
+         echo \DB::connection()->getDatabaseName();     
+    } catch (\Exception $e) {
+          echo 'None';
+    }
+});
+
 Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
 
 Route::fallback(function () {
-    echo error;
+    echo "error";
 });
