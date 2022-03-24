@@ -225,17 +225,18 @@ return [
     */
 
     'menu' => [
+        // Navbar items:
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        [
-            ['header' => 'Filters'],
+        ['header' => 'Filters'],
             [
                 'text' => 'Manufacturer',
                 'url'  => '#',
@@ -266,7 +267,6 @@ return [
                 'text' => 'User',
                 'url'  => '#',
             ],
-        ],
     ],
 
     /*
