@@ -234,8 +234,8 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        ['header' => 'Filters'],
         [
+            ['header' => 'Filters'],
             [
                 'text' => 'Manufacturer',
                 'url'  => '#',
