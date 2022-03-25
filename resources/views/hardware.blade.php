@@ -16,19 +16,15 @@
         </tr>
       </thead>
       <tbody>
+        @foreach($hardwares AS $hardware)
         <tr>
-          <td><a>Name</a></td>
-          <td>Phone Number</td>
-          <td>Email</td>
-          <td>Form Factor</td>
-          <td><a>Manufacturer</a></td>
-          <td>CPU</td>
-          <td>GPU</td>
-          <td>RAM</td>
-          <td>Price</td>
-          <td>Purchase Date</td>
-          <td><a>Notes</a></td>
+          <td>{{ $hardware->id }}</td>
+          <td>{{ $hardware->cpu }}</td>
+          <td>{{ $hardware->gpu }}</td>
+          <td>{{ $hardware->ram }}</td>
+          <td>{{ $hardware->type }}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
