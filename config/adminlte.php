@@ -241,27 +241,22 @@ return [
                 'text' => 'Manufacturer',
                 'url'  => '#',
             ],
+            
             [
-                'text'    => 'Category',
+                'text' => 'Desktop',
+                'url'  => '#',
+            ],
+            [
+                'text'    => 'Laptop',
                 'url'     => '#',
-                'submenu' => [
-                    [
-                        'text' => 'Desktop',
-                        'url'  => '#',
-                    ],
-                    [
-                        'text'    => 'Laptop',
-                        'url'     => '#',
-                        ],
-                    [
-                        'text'    => 'Tablet',
-                        'url'     => '#',
-                    ],
-                    [
-                        'text'    => 'Phone',
-                        'url'     => '#',
-                    ],
-                ],
+            ],
+            [
+                'text'    => 'Tablet',
+                'url'     => '#',
+            ],
+            [
+                'text'    => 'Phone',
+                'url'     => '#',
             ],
             [
                 'text' => 'User',

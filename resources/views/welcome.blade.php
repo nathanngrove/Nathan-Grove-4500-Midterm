@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Inventory')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Inventory</h1>
 @stop
 
 @section('content')
@@ -17,17 +17,17 @@
       </thead>
       <tbody>
         <tr>
-          <td>Name</td>
+          <td><a>Name</a></td>
           <td>Phone Number</td>
           <td>Email</td>
           <td>Form Factor</td>
-          <td>Manufacturer</td>
+          <td><a>Manufacturer</a></td>
           <td>CPU</td>
           <td>GPU</td>
           <td>RAM</td>
           <td>Price</td>
           <td>Purchase Date</td>
-          <td>Notes</td>
+          <td><a>Notes</a></td>
         </tr>
       </tbody>
     </table>
