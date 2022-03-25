@@ -13,7 +13,8 @@ class NoteController extends Controller
      */
     public function index()
     {
-        //
+        $notes = Note::select('service_type', 'user_id', 'hardware_id')->get();
+        return json_encode(compact('notes')['notes']);
     }
 
     /**
@@ -23,7 +24,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+        return view('notes.create');
     }
 
     /**
@@ -34,7 +35,19 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'service_type' => 'required',
+            'user_id' => 'required',
+            'hardware_id' => 'required', 
+       ]);
+
+       $note = Note::create([ 
+            'service_type' => $request->service_type, 
+            'user_id' => $request->user_id, 
+            'hardware_id' => $request->hardware_id, 
+       ]);
+
+       return $this->index();
     }
 
     /**
@@ -45,7 +58,8 @@ class NoteController extends Controller
      */
     public function show($id)
     {
-        //
+        $note= Note::find($id); 
+        return view('notes.show',compact('note'));
     }
 
     /**

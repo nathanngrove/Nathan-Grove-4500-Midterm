@@ -13,7 +13,8 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        //
+        $purchases = Purchase::select('price', 'user_id', 'hardware_id')->get();
+        return json_encode(compact('purchases')['purchases']);
     }
 
     /**
@@ -23,7 +24,7 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        //
+        return view('purchases.create');
     }
 
     /**
@@ -34,7 +35,19 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'price' => 'required',
+            'user_id' => 'required',
+            'hardware_id' => 'required',
+       ]);
+
+       $purchase = Purchase::create([ 
+            'price' => $request->price, 
+            'user_id' => $request->user_id, 
+            'hardware_id' => $request->hardware_id, 
+       ]);
+
+       return $this->index();
     }
 
     /**
@@ -45,7 +58,8 @@ class PurchaseController extends Controller
      */
     public function show($id)
     {
-        //
+        $purchase= Purchase::find($id); 
+        return view('purchases.show',compact('purchase'));
     }
 
     /**

@@ -13,7 +13,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        $persons = Person::select('name', 'email', 'phone')->get();
+        return json_encode(compact('persons')['persons']);
     }
 
     /**
@@ -23,7 +24,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        //
+        return view('persons.create');
     }
 
     /**
@@ -34,7 +35,19 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+       ]);
+
+       $person = Person::create([ 
+            'name' => $request->name, 
+            'email' => $request->email, 
+            'phone' => $request->phone, 
+       ]);
+
+       return $this->index();
     }
 
     /**
@@ -45,7 +58,8 @@ class PersonController extends Controller
      */
     public function show($id)
     {
-        //
+        $person= Person::find($id); 
+        return view('persons.show',compact('person'));
     }
 
     /**

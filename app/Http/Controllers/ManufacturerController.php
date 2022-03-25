@@ -13,7 +13,8 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        //
+        $manufacturers = Manufacturer::select('name', 'address', 'phone', 'email', 'support_phone', 'support_email')->get();
+        return json_encode(compact('manufacturers')['manufacturers']);
     }
 
     /**
@@ -23,7 +24,7 @@ class ManufacturerController extends Controller
      */
     public function create()
     {
-        //
+        return view('manufacturers.create');
     }
 
     /**
@@ -34,7 +35,25 @@ class ManufacturerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'support_phone' => 'required',
+            'support_email' => 'required',
+       ]);
+
+       $manufacturer = Manufacturer::create([ 
+            'name' => $request->name, 
+            'address' => $request->address, 
+            'phone' => $request->phone, 
+            'email' => $request->email, 
+            'support_phone' => $request->support_phone, 
+            'support_email' => $request->support_email,
+       ]);
+
+       return $this->index();
     }
 
     /**
@@ -45,7 +64,8 @@ class ManufacturerController extends Controller
      */
     public function show($id)
     {
-        //
+        $manufacturer= Manufacturer::find($id); 
+        return view('manufacturers.show',compact('manufacturer'));
     }
 
     /**

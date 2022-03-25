@@ -13,7 +13,8 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        //
+        $hardwares = Hardware::select('cpu', 'gpu', 'ram', 'type')->get();
+        return json_encode(compact('hardwares')['hardwares']);
     }
 
     /**
@@ -23,7 +24,7 @@ class HardwareController extends Controller
      */
     public function create()
     {
-        //
+        return view('hardwares.create');
     }
 
     /**
@@ -34,7 +35,21 @@ class HardwareController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'cpu' => 'required',
+            'gpu' => 'required',
+            'ram' => 'required',
+            'type' => 'required',
+       ]);
+
+       $hardware = Hardware::create([ 
+            'cpu' => $request->cpu, 
+            'gpu' => $request->gpu,
+            'ram' => $request->ram, 
+            'type' => $request->type,
+       ]);
+
+       return $this->index();
     }
 
     /**
@@ -45,7 +60,8 @@ class HardwareController extends Controller
      */
     public function show($id)
     {
-        //
+        $hardware = Hardware::find($id); 
+        return view('hardwares.show',compact('hardware'));
     }
 
     /**
