@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HardwareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/', function () {
 Route::get('/hardwares', function () {
     return view('hardware');
 });
+
+Route::resource('/hardwares', HardwareController::class);
 
 Route::get('/db-test', function () {
     try {         
