@@ -33,6 +33,8 @@
     </table>
   </div>
 </div>
+
+<a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add hardware</a>
 @stop
 
 @section('css')
