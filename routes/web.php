@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todos', function () {
+Route::get('/hardwares', function () {
     return view('hardware');
 });
 
