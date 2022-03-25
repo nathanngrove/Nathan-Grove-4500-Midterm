@@ -13,7 +13,7 @@
     <x-adminlte-input name="gpu" label="GPU"/>
     <x-adminlte-input name="ram" label="RAM"/>
     <x-adminlte-select name="type" label="Type">
-        <x-adminlte-options :options="['desktop'=>'desktop', 'laptop'=>'laptop', 'tablet'=>'tablet', 'phone'=>'phone']" empty-option="Select an option..."> 
+        <x-adminlte-options options="['desktop'=>'desktop', 'laptop'=>'laptop', 'tablet'=>'tablet', 'phone'=>'phone']" empty-option="Select an option..."> 
     <x-adminlte-select/>
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
