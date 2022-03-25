@@ -10,4 +10,5 @@ class Manufacturer extends Model
     use HasFactory;
     protected $fillable = ['name', 'address', 'phone', 'email', 'support_phone', 'support_email'];
     protected $table = 'manufacturers';
+    public $timestamps = false;
 }

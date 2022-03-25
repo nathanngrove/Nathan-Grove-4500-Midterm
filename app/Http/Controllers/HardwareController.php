@@ -47,7 +47,7 @@ class HardwareController extends Controller
             'cpu' => $request->cpu, 
             'gpu' => $request->gpu,
             'ram' => $request->ram, 
-            'type' => $request->type[0],
+            'type' => $request->type,
        ]);
 
        return $this->index();
