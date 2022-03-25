@@ -9,4 +9,5 @@ class Purchase extends Model
 {
     use HasFactory;
     protected $fillable = ['price', 'user_id', 'hardware_id'];
+    protected $table = 'purchases';
 }
