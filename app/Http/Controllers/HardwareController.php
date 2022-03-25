@@ -36,6 +36,15 @@ class HardwareController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->type == "0")
+            $request->type = "Desktop";
+        else if($request->type == "1")
+            $request->type = "Laptop";
+        else if($request->type == "2")
+            $request->type = "Tablet";
+        else if($request->type == "3")
+            $request->type = "Phone";
+
         $validated = $request->validate([
             'cpu' => 'required',
             'gpu' => 'required',
@@ -47,7 +56,7 @@ class HardwareController extends Controller
             'cpu' => $request->cpu, 
             'gpu' => $request->gpu,
             'ram' => $request->ram, 
-            'type' => $request->type[0],
+            'type' => $request->type,
        ]);
 
        return $this->index();
