@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('gpu');
             $table->string('ram');
             $table->string('type');
+            $table->foreignId('manufacturer_id')->constrained();
         });
     }
 

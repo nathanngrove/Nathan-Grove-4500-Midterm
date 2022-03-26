@@ -37,6 +37,11 @@ Route::get('/db-migrate', function () {
     echo Artisan::output();
 });
 
+Route::get('/db-migrate-fresh', function () {
+    Artisan::call('migrate:fresh');
+    echo Artisan::output();
+});
+
 Route::fallback(function () {
     echo "error";
 });

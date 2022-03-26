@@ -14,7 +14,7 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        $hardwares = Hardware::select('cpu', 'gpu', 'ram', 'type')->get();
+        $hardwares = Hardware::select('cpu', 'gpu', 'ram', 'type', 'manufacturer_id')->get();
         return json_encode(compact('hardwares')['hardwares']);
     }
 
@@ -50,6 +50,7 @@ class HardwareController extends Controller
             'gpu' => 'required',
             'ram' => 'required',
             'type' => 'required',
+            'manufacturer_id' => 'required',
        ]);
 
        $hardware = Hardware::create([ 
@@ -57,6 +58,7 @@ class HardwareController extends Controller
             'gpu' => $request->gpu,
             'ram' => $request->ram, 
             'type' => $request->type,
+            'manufacturer_id' => $request->manufacturer_id,
        ]);
 
        return $this->index();
