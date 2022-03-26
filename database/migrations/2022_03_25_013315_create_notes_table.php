@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->string('service_type');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('person_id')->constrained();
             $table->foreignId('hardware_id')->constrained();
             $table->date('created_at');
         });
