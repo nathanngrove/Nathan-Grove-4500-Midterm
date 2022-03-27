@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
-use App\Http\Controllers\ManufactureController;
+use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\NoteController;
