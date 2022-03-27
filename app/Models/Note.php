@@ -10,13 +10,8 @@ use App\Models\Hardware;
 class Note extends Model
 {
     use HasFactory;
-    protected $fillable = ['service_type', 'user_id', 'hardware_id'];
+    protected $fillable = ['service_type', 'hardware_id'];
     protected $table = 'notes';
-
-    public function employee()
-    {
-        return $this->hasOne(Employee::class);
-    }
 
     public function hardware()
     {

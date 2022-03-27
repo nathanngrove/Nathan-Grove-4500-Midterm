@@ -38,13 +38,11 @@ class NoteController extends Controller
     {
         $validated = $request->validate([
             'service_type' => 'required',
-            'user_id' => 'required',
             'hardware_id' => 'required', 
        ]);
 
        $note = Note::create([ 
-            'service_type' => $request->service_type, 
-            'user_id' => $request->user_id, 
+            'service_type' => $request->service_type,
             'hardware_id' => $request->hardware_id, 
        ]);
 
