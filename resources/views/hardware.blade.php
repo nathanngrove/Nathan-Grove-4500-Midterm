@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Inventory')
+@section('title', 'Registered Hardware')
 
 @section('content_header')
-    <h1>Inventory</h1>
+    <h1>Registered Hardware</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Name</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
+          <th>ID</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
@@ -38,5 +38,17 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
 @stop

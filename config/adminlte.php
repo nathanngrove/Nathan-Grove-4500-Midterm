@@ -239,9 +239,12 @@ return [
         ['header' => 'Filters'],
             [
                 'text' => 'Manufacturer',
-                'url'  => '#',
+                'url'  => '/manufacturers',
             ],
-            
+            [
+                'text' => 'Hardware',
+                'url'  => '/hardwares',
+            ],
             [
                 'text' => 'Desktop',
                 'url'  => '#',
@@ -260,7 +263,7 @@ return [
             ],
             [
                 'text' => 'User',
-                'url'  => '#',
+                'url'  => '/users',
             ],
     ],
 

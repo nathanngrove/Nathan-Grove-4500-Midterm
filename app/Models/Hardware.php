@@ -18,7 +18,7 @@ class Hardware extends Model
 
     public function manufacturer()
     {
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(Manufacturer::class);
     }
 
     public function person()

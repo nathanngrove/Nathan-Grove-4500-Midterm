@@ -22,6 +22,30 @@ Route::get('/hardwares', function () {
     return view('hardware');
 });
 
+Route::get('/manufacturers', function () {
+    return view('manfacturer');
+});
+
+Route::get('/notes', function () {
+    return view('note');
+});
+
+Route::get('/users', function () {
+    return view('person');
+});
+
+Route::get('/purchases', function () {
+    return view('purchase');
+});
+
+Route::resource('/purchases', PurchaseController::class);
+
+Route::resource('/user', PersonController::class);
+
+Route::resource('/notes', NoteController::class);
+
+Route::resource('/manufacturers', ManfacturerController::class);
+
 Route::resource('/hardwares', HardwareController::class);
 
 Route::get('/db-test', function () {
