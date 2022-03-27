@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Person;
+use App\Models\Employee;
 
-class PersonController extends Controller
+class EmployeeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $persons = Person::all();
-        return view('person', compact('persons'));
+        $employees = Employee::all();
+        return view('employee', compact('employees'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        return view('persons.create');
+        return view('employees.create');
     }
 
     /**
@@ -42,7 +42,7 @@ class PersonController extends Controller
             'phone' => 'required',
        ]);
 
-       $person = Person::create([ 
+       $employee = Employee::create([ 
             'name' => $request->name, 
             'email' => $request->email, 
             'phone' => $request->phone, 
@@ -59,8 +59,8 @@ class PersonController extends Controller
      */
     public function show($id)
     {
-        $person= Person::find($id); 
-        return view('persons.show',compact('person'));
+        $employee= Employee::find($id); 
+        return view('employees.show',compact('employee'));
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Person;
+use App\Models\Employee;
 use App\Models\Hardware;
 
 class Purchase extends Model
@@ -13,9 +13,9 @@ class Purchase extends Model
     protected $fillable = ['price', 'user_id', 'hardware_id'];
     protected $table = 'purchases';
 
-    public function person()
+    public function employee()
     {
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function hardware()

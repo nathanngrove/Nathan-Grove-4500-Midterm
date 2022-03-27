@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Support Email</th><th>Support Phone</th>
+          <th>ID</th><th>Name</th><th>Email</th><th>Phone</th>
         </tr>
       </thead>
       <tbody>
@@ -28,7 +28,7 @@
   </div>
 </div>
 
-<a href="{{ route('persons.create') }} " class="btn btn-primary">Register Employee</a>
+<a href="{{ route('employees.create') }} " class="btn btn-primary">Register Employee</a>
 @stop
 
 @section('js')

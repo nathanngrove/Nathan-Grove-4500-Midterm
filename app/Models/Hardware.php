@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Manufacturer;
 use App\Models\Note;
-use App\Models\Person;
+use App\Models\Employee;
 use App\Models\Purchase;
 
 class Hardware extends Model
@@ -21,9 +21,9 @@ class Hardware extends Model
         return $this->belongsTo(Manufacturer::class);
     }
 
-    public function person()
+    public function employee()
     {
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function purchase()

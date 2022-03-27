@@ -238,7 +238,7 @@ return [
         ],
         ['header' => 'Filters'],
             [
-                'text' => 'Manufacturer',
+                'text' => 'Manufacturers',
                 'url'  => '/manufacturers',
             ],
             [
@@ -246,24 +246,8 @@ return [
                 'url'  => '/hardwares',
             ],
             [
-                'text' => 'Desktop',
-                'url'  => '#',
-            ],
-            [
-                'text'    => 'Laptop',
-                'url'     => '#',
-            ],
-            [
-                'text'    => 'Tablet',
-                'url'     => '#',
-            ],
-            [
-                'text'    => 'Phone',
-                'url'     => '#',
-            ],
-            [
-                'text' => 'User',
-                'url'  => '/users',
+                'text' => 'Employees',
+                'url'  => '/employees',
             ],
     ],
 

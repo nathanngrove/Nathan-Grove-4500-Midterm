@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\ManufacturerController;
-use App\Http\Controllers\PersonController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\NoteController;
 
@@ -35,7 +35,7 @@ Route::get('/notes', function () {
 });
 
 Route::get('/employees', function () {
-    return view('person');
+    return view('employee');
 });
 
 Route::get('/purchases', function () {
@@ -50,6 +50,16 @@ Route::get('/db-test', function () {
     }
 });
 
+Route::resource('/purchases', PurchaseController::class);
+
+Route::resource('/employees', EmployeeController::class);
+
+Route::resource('/notes', NoteController::class);
+
+Route::resource('/manufacturers', ManufacturerController::class);
+
+Route::resource('/hardwares', HardwareController::class);
+
 Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
@@ -59,16 +69,6 @@ Route::get('/db-migrate-refresh', function () {
     Artisan::call('migrate:refresh');
     echo Artisan::output();
 });
-
-Route::resource('/purchases', PurchaseController::class);
-
-Route::resource('/employees', PersonController::class);
-
-Route::resource('/notes', NoteController::class);
-
-Route::resource('/manufacturers', ManufacturerController::class);
-
-Route::resource('/hardwares', HardwareController::class);
 
 Route::fallback(function () {
     echo "error";

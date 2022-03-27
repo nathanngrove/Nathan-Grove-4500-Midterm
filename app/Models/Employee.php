@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Hardware;
 use App\Models\Purchase;
 
-class Person extends Model
+class Employee extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'email', 'phone'];
-    protected $table = 'persons';
+    protected $table = 'employees';
     public $timestamps = false;
 
     public function purchases()

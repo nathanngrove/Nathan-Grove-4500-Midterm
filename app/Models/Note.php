@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Person;
+use App\Models\Employee;
 use App\Models\Hardware;
 
 class Note extends Model
@@ -13,9 +13,9 @@ class Note extends Model
     protected $fillable = ['service_type', 'user_id', 'hardware_id'];
     protected $table = 'notes';
 
-    public function person()
+    public function employee()
     {
-        return $this->hasOne(Person::class);
+        return $this->hasOne(Employee::class);
     }
 
     public function hardware()
