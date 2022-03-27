@@ -33,10 +33,6 @@
 <a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add hardware</a>
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
 @section('js')
 <script>
     $(document).ready(function() {
