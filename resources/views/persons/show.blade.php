@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Hardware')
+@section('title', 'Registered Employee')
 
 @section('content_header')
-    <h1>Hardware</h1>
+    <h1>Employee Information</h1>
 @stop
 
 @section('content')
-  <p>{{ $hardware->cpu; }}</p>
-  <p>{{ $hardware->gpu; }}</p>
-  <p>{{ $hardware->ram; }}</p>
+  <p>{{ $person->name; }}</p>
+  <p>{{ $person->email; }}</p>
+  <p>{{ $person->phone; }}</p>
 @stop

@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Inventory')
+@section('title', 'Employees')
 
 @section('content_header')
-    <h1>Inventory</h1>
+    <h1>Registered Employees</h1>
 @stop
 
 @section('content')
@@ -12,33 +12,37 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Name</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
+          <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Support Email</th><th>Support Phone</th>
         </tr>
       </thead>
       <tbody>
+        @foreach($persons AS $person)
         <tr>
-          <td><a>Name</a></td>
-          <td>Phone Number</td>
-          <td>Email</td>
-          <td>Form Factor</td>
-          <td><a>Manufacturer</a></td>
-          <td>CPU</td>
-          <td>GPU</td>
-          <td>RAM</td>
-          <td>Price</td>
-          <td>Purchase Date</td>
-          <td><a>Notes</a></td>
+          <td>{{ $person->id }}</td>
+          <td>{{ $person->name }}</td>
+          <td>{{ $person->email }}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
 </div>
-@stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<a href="{{ route('persons.create') }} " class="btn btn-primary">Register Employee</a>
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
 @stop

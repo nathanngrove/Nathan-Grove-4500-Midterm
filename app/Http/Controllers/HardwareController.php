@@ -50,7 +50,6 @@ class HardwareController extends Controller
             'gpu' => 'required',
             'ram' => 'required',
             'type' => 'required',
-            'manufacturer_id' => 'required',
        ]);
 
        $hardware = Hardware::create([ 

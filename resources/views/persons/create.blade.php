@@ -1,21 +1,17 @@
 @extends('adminlte::page')
 
-@section('title', 'To Do List')
+@section('title', 'Register Employee')
 
 @section('content_header')
-    <h1>To Do's</h1>
+    <h1>Register Employee</h1>
 @stop
 
 @section('content')
-<form method="post" action="{{ route('hardwares.store') }}" >
+<form method="post" action="{{ route('persons.store') }}" >
     @csrf
-    <x-adminlte-input name="cpu" label="CPU"/>
-    <x-adminlte-input name="gpu" label="GPU"/>
-    <x-adminlte-input name="ram" label="RAM"/>
-    <x-adminlte-select name="type" label="Type">
-    <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']"
-        placeholder="Select an option..."/>
-    </x-adminlte-select>
-    <x-adminlte-button type="Submit" label="Submit" />
+    <x-adminlte-input name="name" label="Name"/>
+    <x-adminlte-input name="email" label="Email"/>
+    <x-adminlte-input name="phone" label="Phone"/>
+    <x-adminlte-button class="btn btn-primary" type="Submit" label="Register" />
 </form>
 @stop

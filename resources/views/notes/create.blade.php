@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('hardwares.store') }}" >
+<form method="post" action="{{ route('notes.store') }}" >
     @csrf
     <x-adminlte-input name="cpu" label="CPU"/>
     <x-adminlte-input name="gpu" label="GPU"/>
