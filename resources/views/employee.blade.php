@@ -16,11 +16,11 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($persons AS $person)
+        @foreach($employees AS $employee)
         <tr>
-          <td>{{ $person->id }}</td>
-          <td>{{ $person->name }}</td>
-          <td>{{ $person->email }}</td>
+          <td>{{ $employee->id }}</td>
+          <td>{{ $employee->name }}</td>
+          <td>{{ $employee->email }}</td>
         </tr>
         @endforeach
       </tbody>

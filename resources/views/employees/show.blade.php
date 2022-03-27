@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-  <p>{{ $person->name; }}</p>
-  <p>{{ $person->email; }}</p>
-  <p>{{ $person->phone; }}</p>
+  <p>{{ $employee->name; }}</p>
+  <p>{{ $employee->email; }}</p>
+  <p>{{ $employee->phone; }}</p>
 @stop
