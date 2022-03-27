@@ -38,16 +38,6 @@ Route::get('/purchases', function () {
     return view('purchase');
 });
 
-Route::resource('/purchases', PurchaseController::class);
-
-Route::resource('/user', PersonController::class);
-
-Route::resource('/notes', NoteController::class);
-
-Route::resource('/manufacturers', ManfacturerController::class);
-
-Route::resource('/hardwares', HardwareController::class);
-
 Route::get('/db-test', function () {
     try {         
          echo \DB::connection()->getDatabaseName();     
@@ -65,6 +55,16 @@ Route::get('/db-migrate-refresh', function () {
     Artisan::call('migrate:refresh');
     echo Artisan::output();
 });
+
+Route::resource('/purchases', PurchaseController::class);
+
+Route::resource('/user', PersonController::class);
+
+Route::resource('/notes', NoteController::class);
+
+Route::resource('/manufacturers', ManfacturerController::class);
+
+Route::resource('/hardwares', HardwareController::class);
 
 Route::fallback(function () {
     echo "error";
