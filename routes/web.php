@@ -23,7 +23,7 @@ Route::get('/hardwares', function () {
 });
 
 Route::get('/manufacturers', function () {
-    return view('manfacturer');
+    return view('manufacturer');
 });
 
 Route::get('/notes', function () {
@@ -62,7 +62,7 @@ Route::resource('/user', PersonController::class);
 
 Route::resource('/notes', NoteController::class);
 
-Route::resource('/manufacturers', ManfacturerController::class);
+Route::resource('/manufacturers', ManufacturerController::class);
 
 Route::resource('/hardwares', HardwareController::class);
 
