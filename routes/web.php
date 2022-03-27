@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
+use App\Http\Controllers\ManufactureController;
+use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\NoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +34,7 @@ Route::get('/notes', function () {
     return view('note');
 });
 
-Route::get('/users', function () {
+Route::get('/employees', function () {
     return view('person');
 });
 
@@ -58,7 +62,7 @@ Route::get('/db-migrate-refresh', function () {
 
 Route::resource('/purchases', PurchaseController::class);
 
-Route::resource('/user', PersonController::class);
+Route::resource('/employees', PersonController::class);
 
 Route::resource('/notes', NoteController::class);
 
