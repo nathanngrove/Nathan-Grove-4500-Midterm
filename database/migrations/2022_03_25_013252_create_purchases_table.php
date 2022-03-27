@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->integer('price');
-            $table->foreignId('employee_id')->constrained();
+            $table->foreignId('employee_id');
             $table->foreignId('hardware_id')->constrained('hardwares');
             $table->date('created_at');
         });
