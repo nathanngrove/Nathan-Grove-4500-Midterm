@@ -14,8 +14,8 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $notes = Note::select('service_type', 'user_id', 'hardware_id')->get();
-        return json_encode(compact('notes')['notes']);
+        $notes = Note::all();
+        return view('note', compact('notes'));
     }
 
     /**

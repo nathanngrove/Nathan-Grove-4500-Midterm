@@ -14,8 +14,8 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        $purchases = Purchase::select('price', 'user_id', 'hardware_id')->get();
-        return json_encode(compact('purchases')['purchases']);
+        $purchases = Purchase::all();
+        return view('purchase', compact('purchases'));
     }
 
     /**

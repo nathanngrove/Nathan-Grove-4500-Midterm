@@ -14,8 +14,8 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        $hardwares = Hardware::select('cpu', 'gpu', 'ram', 'type', 'manufacturer_id')->get();
-        return json_encode(compact('hardwares')['hardwares']);
+        $hardwares = Hardware::all();
+        return view('hardware', compact('hardwares'));
     }
 
     /**

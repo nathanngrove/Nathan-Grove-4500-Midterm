@@ -14,8 +14,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $persons = Person::select('name', 'email', 'phone')->get();
-        return json_encode(compact('persons')['persons']);
+        $persons = Person::all();
+        return view('person', compact('persons'));
     }
 
     /**

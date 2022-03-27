@@ -14,8 +14,8 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        $manufacturers = Manufacturer::select('name', 'address', 'phone', 'email', 'support_phone', 'support_email')->get();
-        return json_encode(compact('manufacturers')['manufacturers']);
+        $manufacturers = Manufacturer::all();
+        return view('manufacturer', compact('manufacturers'));
     }
 
     /**
