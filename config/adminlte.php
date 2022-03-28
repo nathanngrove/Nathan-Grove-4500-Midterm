@@ -249,6 +249,10 @@ return [
                 'text' => 'Employees',
                 'url'  => '/employees',
             ],
+            [
+                'text' => 'Purchases',
+                'url'  => '/purchases',
+            ],
     ],
 
     /*

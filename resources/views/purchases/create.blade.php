@@ -16,6 +16,6 @@
     <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']"
         placeholder="Select an option..."/>
     </x-adminlte-select>
-    <x-adminlte-button type="Submit" label="Submit" />
+    <x-adminlte-button type="Submit" class="btn btn-primary" label="Submit" />
 </form>
 @stop

@@ -45,14 +45,19 @@ class HardwareController extends Controller
         else if($request->type == "3")
             $request->type = "Phone";
 
+        
+
         $validated = $request->validate([
+            'employee_id' => 'required',
             'cpu' => 'required',
             'gpu' => 'required',
             'ram' => 'required',
             'type' => 'required',
+            'manufacturer_id' => 'required',
        ]);
 
        $hardware = Hardware::create([ 
+            'employee_id' => $request->employee_id,
             'cpu' => $request->cpu, 
             'gpu' => $request->gpu,
             'ram' => $request->ram, 

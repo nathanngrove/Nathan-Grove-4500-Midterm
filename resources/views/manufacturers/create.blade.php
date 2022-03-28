@@ -15,6 +15,6 @@
     <x-adminlte-input name="phone" label="Phone"/>
     <x-adminlte-input name="support_email" label="Support Email"/>
     <x-adminlte-input name="support_phone" label="Support Phone"/>
-    <x-adminlte-button type="Submit" label="Submit" />
+    <x-adminlte-button type="Submit" class="btn btn-primary" label="Submit" />
 </form>
 @stop

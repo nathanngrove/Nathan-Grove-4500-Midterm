@@ -12,17 +12,19 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
+          <th>ID</th><th>Employee</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Type</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
         @foreach($hardwares AS $hardware)
         <tr>
           <td>{{ $hardware->id }}</td>
+          <td>Name</td>
           <td>{{ $hardware->cpu }}</td>
           <td>{{ $hardware->gpu }}</td>
           <td>{{ $hardware->ram }}</td>
           <td>{{ $hardware->type }}</td>
+          <td><a class="btn btn-primary">View Notes</a></td>
         </tr>
         @endforeach
       </tbody>

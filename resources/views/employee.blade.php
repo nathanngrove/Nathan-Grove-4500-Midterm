@@ -21,6 +21,7 @@
           <td>{{ $employee->id }}</td>
           <td>{{ $employee->name }}</td>
           <td>{{ $employee->email }}</td>
+          <td>{{ $employee->phone }}</td>
         </tr>
         @endforeach
       </tbody>

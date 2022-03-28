@@ -12,6 +12,6 @@
     <x-adminlte-input name="cpu" label="CPU"/>
     <x-adminlte-input name="gpu" label="GPU"/>
     <x-adminlte-input name="ram" label="RAM"/>
-    <x-adminlte-button type="Submit" label="Submit" />
+    <x-adminlte-button type="Submit" class="btn btn-primary" label="Submit" />
 </form>
 @stop
