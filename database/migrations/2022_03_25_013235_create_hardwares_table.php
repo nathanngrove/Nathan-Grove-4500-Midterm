@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('gpu');
             $table->string('ram');
             $table->string('type');
+            $table->foreignId('purchase_id')->constrained('purchases');
             $table->foreignId('manufacturer_id')->constrained('manufacturers');
         });
     }

@@ -53,6 +53,7 @@ class HardwareController extends Controller
             'gpu' => 'required',
             'ram' => 'required',
             'type' => 'required',
+            'purchase_id' => 'required',
             'manufacturer_id' => 'required',
        ]);
 
@@ -62,6 +63,7 @@ class HardwareController extends Controller
             'gpu' => $request->gpu,
             'ram' => $request->ram, 
             'type' => $request->type,
+            'purchase_id' => $request->purchase_id,
             'manufacturer_id' => $request->manufacturer_id,
        ]);
 
