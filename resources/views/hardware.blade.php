@@ -32,6 +32,8 @@
   </div>
 </div>
 
+{{$manufacturers}}
+
 <a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add hardware</a>
 @stop
 
