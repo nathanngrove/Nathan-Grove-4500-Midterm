@@ -15,8 +15,7 @@ class HardwareController extends Controller
     public function index()
     {
         $hardwares = Hardware::all();
-        $manufacturers = Hardware::with('manufacturer')->get();
-        return view('hardware', compact('hardwares'), compact('manufacturers'));
+        return view('hardware', compact('hardwares'));
     }
 
     /**
@@ -49,7 +48,6 @@ class HardwareController extends Controller
         
 
         $validated = $request->validate([
-            'employee_id' => 'required',
             'cpu' => 'required',
             'gpu' => 'required',
             'ram' => 'required',
@@ -57,8 +55,7 @@ class HardwareController extends Controller
             'manufacturer_id' => 'required',
        ]);
 
-       $hardware = Hardware::create([ 
-            'employee_id' => $request->employee_id,
+       $hardware = Hardware::create([
             'cpu' => $request->cpu, 
             'gpu' => $request->gpu,
             'ram' => $request->ram, 

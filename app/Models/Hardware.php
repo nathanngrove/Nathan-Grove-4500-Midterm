@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Manufacturer;
-use App\Models\Note;
 use App\Models\Employee;
 use App\Models\Purchase;
 
 class Hardware extends Model
 {
     use HasFactory;
-    protected $fillable = ['employee_id', 'cpu', 'gpu', 'ram', 'type', 'purchase_id', 'manufacturer_id'];
+    protected $fillable = ['manufacturer_id', 'cpu', 'gpu', 'ram', 'type'];
     protected $table = 'hardwares';
     public $timestamps = false;
 
     public function manufacturer()
     {
-        return $this->belongsTo(Manufacturer::class, 'manufacturer_id', 'id');
+        return $this->belongsTo(Manufacturer::class);
     }
 
     public function employee()
@@ -28,11 +27,6 @@ class Hardware extends Model
 
     public function purchase()
     {
-        return $this->belongsTo(Purchase::class);
-    }
-
-    public function notes()
-    {
-        return $this->hasMany(Note::class);
+        return $this->hasMany(Purchase::class);
     }
 }

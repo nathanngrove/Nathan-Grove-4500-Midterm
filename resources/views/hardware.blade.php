@@ -19,7 +19,7 @@
         @foreach($hardwares AS $hardware)
         <tr>
           <td>{{ $hardware->id }}</td>
-          <td>Name</td>
+          <td>{{$hardware->manufacturer->name}}</td>
           <td>{{ $hardware->cpu }}</td>
           <td>{{ $hardware->gpu }}</td>
           <td>{{ $hardware->ram }}</td>
@@ -32,9 +32,7 @@
   </div>
 </div>
 
-{{$manufacturers}}
-
-<a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add hardware</a>
+<a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add Hardware</a>
 @stop
 
 @section('js')
@@ -42,19 +40,5 @@
     $(document).ready(function() {
         $('#table').DataTable();
     } );
-</script>
-@stop
-
-@section('js')
-<script>
-    $(document).ready(function() {
-        $('#table').DataTable();
-    } );
-</script>
-@stop
-
-@section('js')
-<script>
-    console.log($manufacturers);
 </script>
 @stop

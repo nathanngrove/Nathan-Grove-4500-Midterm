@@ -37,13 +37,15 @@ class NoteController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'service_type' => 'required',
+            'employee_id' => 'required', 
+            'service_type' => 'required', 
             'hardware_id' => 'required', 
        ]);
 
        $note = Note::create([ 
-            'service_type' => $request->service_type,
-            'hardware_id' => $request->hardware_id, 
+            'employee_id' => $request->employee_id,
+            'service_type' => $request->service_type, 
+            'service_notes' => $request->service_notes, 
        ]);
 
        return $this->index();

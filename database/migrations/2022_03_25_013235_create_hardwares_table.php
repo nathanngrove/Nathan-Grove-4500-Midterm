@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained('employees');
+            $table->foreignId('manufacturer_id')->constrained('manufacturers');
             $table->string('cpu');
             $table->string('gpu');
             $table->string('ram');
             $table->string('type');
-            $table->foreignId('manufacturer_id')->constrained('manufacturers');
         });
     }
 

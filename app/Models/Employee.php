@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Hardware;
+use App\Models\Note;
 use App\Models\Purchase;
 
 class Employee extends Model
@@ -14,13 +15,18 @@ class Employee extends Model
     protected $table = 'employees';
     public $timestamps = false;
 
-    public function purchases()
-    {
-        return $this->hasMany(Purchase::class);
-    }
-
     public function hardwares()
     {
         return $this->hasMany(Hardware::class);
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
     }
 }
