@@ -12,6 +12,7 @@ class Purchase extends Model
     use HasFactory;
     protected $fillable = ['price', 'employee_id', 'hardware_id'];
     protected $table = 'purchases';
+    public $timestamps = false;
 
     public function employee()
     {
