@@ -47,9 +47,3 @@
     } );
 </script>
 @stop
-
-@section('js')
-<script>
-    console.log($manufacturers);
-</script>
-@stop
