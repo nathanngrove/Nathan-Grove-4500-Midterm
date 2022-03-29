@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Support Email</th><th>Support Phone</th>
+          <th>ID</th><th>Name</th><th>Address</th><th>Email</th><th>Phone</th><th>Support Email</th><th>Support Phone</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +20,7 @@
         <tr>
           <td>{{ $manufacturer->id }}</td>
           <td>{{ $manufacturer->name }}</td>
+          <td>{{ $manufacturer->address }}</td>
           <td>{{ $manufacturer->email }}</td>
           <td>{{ $manufacturer->phone }}</td>
           <td>{{ $manufacturer->support_email }}</td>
@@ -30,8 +31,7 @@
     </table>
   </div>
 </div>
-
-<a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Add Manufacturer</a>
+<a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Register a Manufacturer</a>
 @stop
 
 @section('js')

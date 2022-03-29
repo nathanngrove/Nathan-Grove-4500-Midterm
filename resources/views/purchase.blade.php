@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Inventory')
+@section('title', 'Purchases')
 
 @section('content_header')
-    <h1>Inventory</h1>
+    <h1>Purchases</h1>
 @stop
 
 @section('content')
@@ -12,33 +12,38 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Name</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
+          <th>ID</th><th>Employee</th><th>Price</th><th>Manufacturer</th><th>Date</th>
         </tr>
       </thead>
       <tbody>
+        @foreach($purchases AS $purchase)
         <tr>
-          <td><a>Name</a></td>
-          <td>Phone Number</td>
-          <td>Email</td>
-          <td>Form Factor</td>
-          <td><a>Manufacturer</a></td>
-          <td>CPU</td>
-          <td>GPU</td>
-          <td>RAM</td>
-          <td>Price</td>
-          <td>Purchase Date</td>
-          <td><a>Notes</a></td>
+          <td>{{ $purchase->id }}</td>
+          <td>{{ $purchase->employee->name }}</td>
+          <td>{{ $purchase->price }}</td>
+          <td>{{ $purchase->hardware->manufacturer->name }}</td>
+          <td>{{ $purchase->date }}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
 </div>
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<a href="{{ route('purchases.create') }} " class="btn btn-primary" >Make a Purchase</a>
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
 @stop

@@ -36,6 +36,12 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
+
+        if($request->service_type == "0")
+            $request->service_type = "Hardware";
+        else if($request->service_type == "1")
+            $request->service_type = "Software";
+
         $validated = $request->validate([
             'employee_id' => 'required', 
             'service_type' => 'required', 

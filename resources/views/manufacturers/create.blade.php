@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Add Manfucturer')
+@section('title', 'Register a Manfucturer')
 
 @section('content_header')
-    <h1>Add Manfucturer</h1>
+    <h1>Register a Manfucturer</h1>
 @stop
 
 @section('content')

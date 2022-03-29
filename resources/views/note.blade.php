@@ -12,14 +12,16 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Service Done</th><th>Date</th>
+          <th>ID</th><th>Employee</th><th>Service Type</th><th>Service Notes</th><th>Date</th>
         </tr>
       </thead>
       <tbody>
-        @foreach($notes AS $note)
+      @foreach($notes AS $note)
         <tr>
           <td>{{ $note->id }}</td>
+          <td>{{ $note->employee->name }}</td>
           <td>{{ $note->service_type }}</td>
+          <td>{{ $note->service_notes }}</td>
           <td>{{ $note->created_at }}</td>
         </tr>
         @endforeach
@@ -27,8 +29,7 @@
     </table>
   </div>
 </div>
-
-<a href="{{ route('notes.create') }} " class="btn btn-primary">Add Note</a>
+<a href="{{ route('notes.create') }} " class="btn btn-primary" >Add a Note</a>
 @stop
 
 @section('js')
