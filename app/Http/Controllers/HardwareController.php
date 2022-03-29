@@ -15,7 +15,7 @@ class HardwareController extends Controller
     public function index()
     {
         $hardwares = Hardware::all();
-        $manufacturers = Hardware::find(1)->manufacturer();
+        $manufacturers = Hardware::with('manufacturer')->get();
         return view('hardware', compact('hardwares'), compact('manufacturers'));
     }
 
