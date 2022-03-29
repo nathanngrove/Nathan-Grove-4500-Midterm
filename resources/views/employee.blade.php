@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<a href="{{ route('employees.create') }} " class="btn btn-primary">Register Employee</a>
+<a href="{{ route('employees.create') }}" class="btn btn-primary">Register Employee</a>
 @stop
 
 @section('js')
@@ -45,5 +45,11 @@
     $(document).ready(function() {
         $('#table').DataTable();
     } );
+</script>
+@stop
+
+@section('js')
+<script>
+    console.log($manufacturers);
 </script>
 @stop
