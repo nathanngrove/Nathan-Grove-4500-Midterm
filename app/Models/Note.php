@@ -12,7 +12,6 @@ class Note extends Model
     use HasFactory;
     protected $fillable = ['employee_id', 'service_type', 'service_notes'];
     protected $table = 'notes';
-    public $timestamps = false;
 
     public function employee()
     {
