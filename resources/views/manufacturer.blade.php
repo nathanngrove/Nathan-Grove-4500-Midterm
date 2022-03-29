@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Add manufacturer</a>
+<a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Add Manufacturer</a>
 @stop
 
 @section('js')
