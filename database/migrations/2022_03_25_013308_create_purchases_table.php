@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('employee_id')->constrained('employees');
             $table->foreignId('hardware_id')->constrained('hardwares');
             $table->integer('price');
-            $table->date('created_at');
+            $table->timestamps();
         });
     }
 

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('employee_id')->constrained('employees');
             $table->string('service_type');
             $table->string('service_notes');
-            $table->date('created_at');
+            $table->timestamps();
         });
     }
 
