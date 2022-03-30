@@ -16,6 +16,7 @@
         </tr>
       </thead>
       <tbody>
+      @foreach($all_notes AS $note)
         <tr>
           <td>{{ $note->id }}</td>
           <td>{{ $note->purchase->employee->name }}</td>
@@ -23,6 +24,7 @@
           <td>{{ $note->service_notes }}</td>
           <td>{{ $note->created_at }}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
