@@ -54,7 +54,7 @@ Route::resource('/purchases', PurchaseController::class);
 
 Route::resource('/employees', EmployeeController::class);
 
-Route::resource('/notes', NoteController::class);
+Route::resource('purchases.notes', 'NoteController');
 
 Route::resource('/manufacturers', ManufacturerController::class);
 
