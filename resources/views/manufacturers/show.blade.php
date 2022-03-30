@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Manufacturer Registered')
+@section('title', 'Registered Manufacturer')
 
 @section('content_header')
-    <h1>Manufacturer Registered</h1>
+    <h1>Manufacturer</h1>
 @stop
 
 @section('content')

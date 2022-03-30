@@ -248,14 +248,14 @@ return [
                 'icon' => 'fas fa-fw fa-address-book',
             ],
             [
-                'text' => 'Hardware',
-                'url'  => '/hardwares',
-                'icon' => 'fas fa-fw fa-clipboard',
-            ],
-            [
                 'text' => 'Employees',
                 'url'  => '/employees',
                 'icon' => 'fas fa-fw fa-user',
+            ],
+            [
+                'text' => 'Hardware',
+                'url'  => '/hardwares',
+                'icon' => 'fas fa-fw fa-clipboard',
             ],
     ],
 
