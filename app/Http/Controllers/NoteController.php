@@ -65,8 +65,9 @@ class NoteController extends Controller
      */
     public function show($id)
     {
-        $note = Note::find($id)->purchase->notes;
-        return view('notes.show',compact('note'));
+        $note = Note::find($id);
+        $all_notes = $note->purchase->notes;
+        return view('notes.show',compact('all_notes'));
     }
 
     /**
