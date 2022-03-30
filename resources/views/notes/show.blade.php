@@ -3,7 +3,7 @@
 @section('title', 'Note')
 
 @section('content_header')
-    <h1>Notes for {{$note->purchase->employee->name}} on purchase <a href="purchases/$note->purchase->id">$note->purchase->id</a></h1>
+    <h1>Notes</h1>
 @stop
 
 @section('content')

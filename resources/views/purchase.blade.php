@@ -22,10 +22,10 @@
           <td>{{ $purchase->employee->name }}</td>
           <td>{{ $purchase->employee->email }}</td>
           <td>{{ $purchase->employee->phone }}</td>
-          <td><a href="hardware/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
-          <td><a href="manufacturer/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
+          <td><a href="hardwares/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
+          <td><a href="manufacturers/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
           <td>{{ $purchase->created_at }}</td>
-          <td><a href="hardware/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
+          <td><a href="hardwares/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
           <td><a href="notes/{{$purchase->id}}" class="btn btn-primary">View Notes</a></td>
         </tr>
         @endforeach
