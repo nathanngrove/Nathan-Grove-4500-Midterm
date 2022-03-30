@@ -63,9 +63,9 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($purchase_id)
     {
-        $note = Note::find($id);
+        $note = Note::find($purchase_id);
         $all_notes = $note->purchase->notes;
         return view('notes.show',compact('all_notes'));
     }
