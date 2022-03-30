@@ -10,7 +10,7 @@
 <form method="post" action="{{ route('notes.store') }}" >
     @csrf
     <x-adminlte-input name="purchase_id" label="Purchase ID"/>
-    <x-adminlte-select name="type" label="Type">
+    <x-adminlte-select name="service_type" label="Service Type">
     <x-adminlte-options :options="['Hardware', 'Software']"
         placeholder="Select an option..."/>
     </x-adminlte-select>
