@@ -19,7 +19,7 @@
       @foreach($notes AS $note)
         <tr>
           <td>{{ $note->id }}</td>
-          <td>{{ $note->employee->name }}</td>
+          <td>{{ $note->purchase->employee->name }}</td>
           <td>{{ $note->service_type }}</td>
           <td>{{ $note->service_notes }}</td>
           <td>{{ $note->created_at }}</td>

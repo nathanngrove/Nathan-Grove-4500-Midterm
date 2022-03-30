@@ -9,7 +9,7 @@
 @section('content')
 <form method="post" action="{{ route('notes.store') }}" >
     @csrf
-    <x-adminlte-input name="employee_id" label="Employee ID"/>
+    <x-adminlte-input name="purchase_id" label="Purchase ID"/>
     <x-adminlte-select name="type" label="Type">
     <x-adminlte-options :options="['Hardware', 'Software']"
         placeholder="Select an option..."/>
