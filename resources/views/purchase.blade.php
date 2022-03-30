@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Purchases')
+@section('title', 'Inventory')
 
 @section('content_header')
-    <h1>Purchases</h1>
+    <h1>Current Inventory</h1>
 @stop
 
 @section('content')
@@ -12,17 +12,20 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Employee</th><th>Price</th><th>Manufacturer</th><th>Date</th><th>Notes</th>
+          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Manufacturer Name</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
         @foreach($purchases AS $purchase)
         <tr>
-          <td>{{ $purchase->id }}</td>
+          <td>{{ $purchase->employee->id }}</td>
           <td>{{ $purchase->employee->name }}</td>
-          <td>{{ $purchase->price }}</td>
-          <td>{{ $purchase->hardware->manufacturer->name }}</td>
+          <td>{{ $purchase->employee->email }}</td>
+          <td>{{ $purchase->employee->phone }}</td>
+          <td><a href="hardware/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
+          <td><a href="manufacturer/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
           <td>{{ $purchase->created_at }}</td>
+          <td><a href="hardware/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
           <td><a href="notes/{{$purchase->id}}" class="btn btn-primary">View Notes</a></td>
         </tr>
         @endforeach
