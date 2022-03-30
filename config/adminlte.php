@@ -239,13 +239,13 @@ return [
         [
             'text' => 'Homepage',
             'url'  => '/',
-            'icon' => 'fa-solid fa-bars',
+            'icon' => 'fas fa-fw fa-bars',
         ],
         ['header' => 'Filters'],
             [
                 'text' => 'Manufacturers',
                 'url'  => '/manufacturers',
-                'icon' => 'fa-solid fa-address-book',
+                'icon' => 'fas fa-fw fa-address-book',
             ],
             [
                 'text' => 'Hardware',
@@ -255,7 +255,7 @@ return [
             [
                 'text' => 'Employees',
                 'url'  => '/employees',
-                'icon' => 'fa-solid fa-user',
+                'icon' => 'fas fa-fw fa-user',
             ],
     ],
 
