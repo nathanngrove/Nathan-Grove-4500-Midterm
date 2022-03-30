@@ -23,7 +23,7 @@
           <td>{{ $purchase->price }}</td>
           <td>{{ $purchase->hardware->manufacturer->name }}</td>
           <td>{{ $purchase->created_at }}</td>
-          <td><a href="{{ route('purchases.notes.show') }}" class="btn btn-primary">View Notes</a></td>
+          <td><a href="notes/{{$purchase->id}}" class="btn btn-primary">View Notes</a></td>
         </tr>
         @endforeach
       </tbody>
