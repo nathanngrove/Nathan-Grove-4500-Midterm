@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($all_notes AS $note)
+      @foreach($notes AS $note)
         <tr>
           <td>{{ $note->id }}</td>
           <td>{{ $note->purchase->employee->name }}</td>
