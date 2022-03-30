@@ -67,8 +67,7 @@ class NoteController extends Controller
     public function show($purchase_id)
     {
         $all_notes = DB::table('notes')
-                ->where('purchase_id', '=', $purchase_id)
-                ->get();
+                ->where('purchase_id', '=', $purchase_id);
         //$all_notes = $note->purchase->notes;
         //$note = Note::find($purchase_id);
         //$all_notes = $note->purchase->notes;
