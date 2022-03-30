@@ -12,29 +12,46 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Name</th><th>Phone Number</th><th>Email</th><th>Form Factor</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Price</th><th>Purchase Date</th><th>Notes</th>
+          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Manufacturer Name</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
+        @foreach($purchases AS $purchase)
         <tr>
-          <td><a>Name</a></td>
-          <td>Phone Number</td>
-          <td>Email</td>
-          <td>Form Factor</td>
-          <td><a>Manufacturer</a></td>
-          <td>CPU</td>
-          <td>GPU</td>
-          <td>RAM</td>
-          <td>Price</td>
-          <td>Purchase Date</td>
-          <td><a>Notes</a></td>
+          <td>{{ $purchase->employee->id }}</td>
+          <td>{{ $purchase->employee->name }}</td>
+          <td>{{ $purchase->employee->email }}</td>
+          <td>{{ $purchase->employee->phone }}</td>
+          <td><a href="hardware/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
+          <td><a href="manufacturer/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
+          <td>{{ $purchase->created_at }}</td>
+          <td><a href="hardware/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
+          <td><a href="notes/{{$purchase->id}}" class="btn btn-primary">View Notes</a></td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
 </div>
+<a href="{{ route('purchases.create') }} " class="btn btn-primary" >Make a Purchase</a>
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
 @stop

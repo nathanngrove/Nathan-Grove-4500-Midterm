@@ -3,7 +3,7 @@
 @section('title', 'Note')
 
 @section('content_header')
-    <h1>Added a Note</h1>
+    <h1>Notes for {{$note->purchase->employee->name}} on purchase <a href="purchases/$note->purchase->id">$note->purchase->id</a></h1>
 @stop
 
 @section('content')
@@ -29,6 +29,7 @@
     </table>
   </div>
 </div>
+<a href="{{ route('notes.create') }} " class="btn btn-primary" >Add a Note</a>
 @stop
 
 @section('js')

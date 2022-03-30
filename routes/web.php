@@ -50,6 +50,8 @@ Route::get('/db-test', function () {
     }
 });
 
+Route::resource('/', PurchaseController::class);
+
 Route::resource('/purchases', PurchaseController::class);
 
 Route::resource('/employees', EmployeeController::class);

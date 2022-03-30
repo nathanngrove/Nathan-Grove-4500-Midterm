@@ -236,22 +236,31 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'Search',
         ],
+        [
+            'text' => 'Homepage',
+            'url'  => '/',
+            'icon' => 'fas fa-fw fa-clipboard',
+        ],
         ['header' => 'Filters'],
             [
                 'text' => 'Manufacturers',
                 'url'  => '/manufacturers',
+                'icon' => 'fas fa-fw fa-clipboard',
             ],
             [
                 'text' => 'Hardware',
                 'url'  => '/hardwares',
+                'icon' => 'fas fa-fw fa-clipboard',
             ],
             [
                 'text' => 'Employees',
                 'url'  => '/employees',
+                'icon' => 'fas fa-fw fa-clipboard',
             ],
             [
                 'text' => 'Purchases',
                 'url'  => '/purchases',
+                'icon' => 'fas fa-fw fa-clipboard',
             ],
     ],
 
