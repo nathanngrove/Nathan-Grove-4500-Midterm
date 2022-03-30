@@ -43,13 +43,13 @@ class NoteController extends Controller
             $request->service_type = "Software";
 
         $validated = $request->validate([
-            'employee_id' => 'required', 
+            'purchase_id' => 'required', 
             'service_type' => 'required', 
-            'hardware_id' => 'required', 
+            'service_notes' => 'required', 
        ]);
 
        $note = Note::create([ 
-            'employee_id' => $request->employee_id,
+            'purchase_id' => $request->purchase_id,
             'service_type' => $request->service_type, 
             'service_notes' => $request->service_notes, 
        ]);
@@ -65,7 +65,7 @@ class NoteController extends Controller
      */
     public function show($id)
     {
-        $note= Note::find($id); 
+        $note = Note::find($id);
         return view('notes.show',compact('note'));
     }
 

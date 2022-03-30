@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Employee;
 use App\Models\Hardware;
+use App\Models\Note;
 
 class Purchase extends Model
 {
@@ -21,5 +22,10 @@ class Purchase extends Model
     public function hardware()
     {
         return $this->belongsTo(Hardware::class);
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
     }
 }

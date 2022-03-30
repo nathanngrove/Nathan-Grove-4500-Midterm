@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Employee;
-use App\Models\Hardware;
+use App\Models\Purchase;
 
 class Note extends Model
 {
     use HasFactory;
-    protected $fillable = ['employee_id', 'service_type', 'service_notes'];
+    protected $fillable = ['purchase_id', 'service_type', 'service_notes'];
     protected $table = 'notes';
 
-    public function employee()
+    public function purchase()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Purchase::class);
     }
 }

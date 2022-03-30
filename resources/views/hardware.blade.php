@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Type</th><th>Notes</th>
+          <th>ID</th><th>Manufacturer</th><th>CPU</th><th>GPU</th><th>RAM</th><th>Type</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,6 @@
           <td>{{ $hardware->gpu }}</td>
           <td>{{ $hardware->ram }}</td>
           <td>{{ $hardware->type }}</td>
-          <td><a class="btn btn-primary">View Notes</a></td>
         </tr>
         @endforeach
       </tbody>
