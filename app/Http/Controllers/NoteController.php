@@ -55,7 +55,7 @@ class NoteController extends Controller
             'service_notes' => $request->service_notes, 
        ]);
 
-       return $this->show($purchase_id);
+       return $this->show($request->purchase_id);
     }
 
     /**
