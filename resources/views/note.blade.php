@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Note ID</th><th>Employee</th><th>Service Type</th><th>Service Notes</th><th>Date</th><th></th>
+          <th>Note ID</th><th>Employee</th><th>Service Type</th><th>Service Notes</th><th>Date</th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +23,6 @@
           <td>{{ $note->service_type }}</td>
           <td>{{ $note->service_notes }}</td>
           <td>{{ $note->created_at }}</td>
-          <td><a href="{{ route('notes.destroy') }} " class="btn btn-primary" >Delete</a></td>
         </tr>
         @endforeach
       </tbody>
