@@ -7,12 +7,12 @@
     <span>
         <h2>Order by: </h2>
         <div>
-            <input type="radio" id="id" name="id" value="id" checked>
+            <input type="radio" id="id" name="order-by" value="id" checked>
             <label for="id">ID</label>
         </div>
 
         <div>
-            <input type="radio" id="manufacturer" name="manufacturer" value="manufacturer">
+            <input type="radio" id="manufacturer" name="order-by" value="manufacturer">
             <label for="manufacturer">Manufacturer</label>
         </div>
     </span>
