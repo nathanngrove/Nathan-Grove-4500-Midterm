@@ -23,7 +23,7 @@
           <td>{{ $note->service_type }}</td>
           <td>{{ $note->service_notes }}</td>
           <td>{{ $note->created_at }}</td>
-          <td><a href="{{ route('notes.destroy($note-id)') }} " class="btn btn-primary" >Delete</a></td>
+          <td><a  class="btn btn-primary" style="background-color:red;" >Delete</a></td>
         </tr>
         @endforeach
       </tbody>
