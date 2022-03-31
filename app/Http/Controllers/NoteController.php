@@ -103,7 +103,6 @@ class NoteController extends Controller
      */
     public function destroy($id)
     {
-        $response = Note::where('id', $id)->delete();
-        return $this->index();
+        //
     }
 }

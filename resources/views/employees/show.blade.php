@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Employee Name</th><th>Email</th><th>Phone</th>
+          <th>Employee ID</th><th>Employee Name</th><th>Email</th><th>Phone</th>
         </tr>
       </thead>
       <tbody>

@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>ID</th><th>Employee</th><th>Price</th><th>Manufacturer</th><th>Date</th>
+          <th>Invoice ID</th><th>Employee</th><th>Price</th><th>Manufacturer</th><th>Date</th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +21,7 @@
           <td>{{ $purchase->employee->name }}</td>
           <td>{{ $purchase->price }}</td>
           <td>{{ $purchase->hardware->manufacturer->name }}</td>
-          <td>{{ $purchase->date }}</td>
+          <td>{{ $purchase->created_at }}</td>
         </tr>
       </tbody>
     </table>
