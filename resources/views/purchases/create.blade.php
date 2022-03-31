@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Make a Purchase')
+@section('title', 'Add an Invoice')
 
 @section('content_header')
-    <h1>Make a Purchase</h1>
+    <h1>Add an Invoice</h1>
 @stop
 
 @section('content')

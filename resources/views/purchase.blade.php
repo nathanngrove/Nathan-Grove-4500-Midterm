@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Manufacturer Name</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
+          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Hardware Type</th><th>Manufacturer Name</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +23,7 @@
           <td>{{ $purchase->employee->email }}</td>
           <td>{{ $purchase->employee->phone }}</td>
           <td><a href="hardwares/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
+          <td>{{ $purchase->hardware->type }}</td>
           <td><a href="manufacturers/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
           <td>{{ $purchase->created_at }}</td>
           <td><a href="hardwares/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
@@ -33,7 +34,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('purchases.create') }} " class="btn btn-primary" >Make a Purchase</a>
+<a href="{{ route('purchases.create') }} " class="btn btn-primary" >Add an Invoice</a>
 @stop
 
 @section('js')
