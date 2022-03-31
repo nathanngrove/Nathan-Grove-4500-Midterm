@@ -11,7 +11,7 @@ use App\Models\Purchase;
 class Hardware extends Model
 {
     use HasFactory;
-    protected $fillable = ['manufacturer_id', 'cpu', 'gpu', 'ram', 'type'];
+    protected $fillable = ['name', 'manufacturer_id', 'cpu', 'gpu', 'ram', 'type'];
     protected $table = 'hardwares';
     public $timestamps = false;
 

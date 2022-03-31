@@ -9,6 +9,7 @@
 @section('content')
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
+    <x-adminlte-input name="name" label="Name"/>
     <x-adminlte-input name="manufacturer_id" label="Manufacturer ID"/>
     <x-adminlte-input name="cpu" label="CPU"/>
     <x-adminlte-input name="gpu" label="GPU"/>

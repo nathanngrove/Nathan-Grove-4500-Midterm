@@ -46,6 +46,7 @@ class HardwareController extends Controller
             $request->type = "Phone";
 
         $validated = $request->validate([
+            'name' => 'required',
             'manufacturer_id' => 'required',
             'cpu' => 'required',
             'gpu' => 'required',
@@ -54,6 +55,7 @@ class HardwareController extends Controller
        ]);
 
        $hardware = Hardware::create([
+            'name' => $request->name,
             'manufacturer_id' => $request->manufacturer_id,
             'cpu' => $request->cpu, 
             'gpu' => $request->gpu,
