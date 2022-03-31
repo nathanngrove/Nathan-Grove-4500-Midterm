@@ -17,13 +17,13 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ $manufacturer->id; }}</td>
-          <td>{{ $manufacturer->name; }}</td>
-          <td>{{ $manufacturer->address;</td>
-          <td>{{ $manufacturer->email; }}</td>
-          <td>{{ $manufacturer->phone; }}</td>
-          <td>{{ $manufacturer->support_email; }}</td>
-          <td>{{ $manufacturer->support_phone; }}</td>
+          <td>{{ $manufacturer->id }}</td>
+          <td>{{ $manufacturer->name }}</td>
+          <td>{{ $manufacturer->address}}</td>
+          <td>{{ $manufacturer->email }}</td>
+          <td>{{ $manufacturer->phone }}</td>
+          <td>{{ $manufacturer->support_email }}</td>
+          <td>{{ $manufacturer->support_phone }}</td>
         </tr>
       </tbody>
     </table>

@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Hardware Type</th><th>Manufacturer Name</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
+          <th>Employee ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Hardware ID</th><th>Hardware Type</th><th>Manufacturer Name</th><th>Invoice ID</th><th>Date</th><th>Hardware Specs</th><th>Notes</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +25,7 @@
           <td><a href="hardwares/{{$purchase->hardware->id}}">{{ $purchase->hardware->id }}</a></td>
           <td>{{ $purchase->hardware->type }}</td>
           <td><a href="manufacturers/{{$purchase->hardware->manufacturer->id}}">{{ $purchase->hardware->manufacturer->name }}</a></td>
+          <td>{{ $purchase->id }}</td>
           <td>{{ $purchase->created_at }}</td>
           <td><a href="hardwares/{{$purchase->hardware->id}}" class="btn btn-primary">View Hardware Specs</a></td>
           <td><a href="notes/{{$purchase->id}}" class="btn btn-primary">View Notes</a></td>
