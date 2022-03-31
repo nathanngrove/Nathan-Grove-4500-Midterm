@@ -68,9 +68,7 @@ class NoteController extends Controller
     {
         $all_notes = Note::all();
         $notes = $all_notes->where('purchase_id', $purchase_id);
-        //$all_notes = $note->purchase->notes;
-        //$note = Note::find($purchase_id);
-        //$all_notes = $note->purchase->notes;
+        
         return view('notes.show',compact('notes'));
     }
 
